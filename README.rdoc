@@ -1,3 +1,23 @@
 = suddendeath
 
-Description goes here
+= Description
+Redmine Toolbar extension.
+To assist in the sudden death ASCII art input.
+
+= Requirement
+Currently it supports only a short Japanese one line.
+Otherwise, the format will collapse.
+
+* Redmine version                3.2.1.devel
+* Ruby version                   2.0.0-p598 (2014-11-13) [x86_64-linux]
+* Rails version                  4.2.6
+
+= Usage
+Press the button of the added "突" in the toolbar of the ticket creation screen.
+Enter a character in the created macro.
+
+= Install
+Please to "git clone" to Redmine the plugins folder.
+
+= LICENCE
+The MIT License (MIT)
