@@ -1,4 +1,7 @@
 require 'suddendeath_asset_tag_helper_patch'
+require 'sudden_death'
+
+include SuddenDeath
 
 Redmine::Plugin.register :suddendeath do
   name 'Suddendeath plugin'
@@ -16,17 +19,8 @@ Redmine::WikiFormatting::Macros.register do
       raise "string decoration macro is given only argument."
     else
       str = args.first.strip
-      org_strmax = str.each_line.map {|line| line.chomp.length}.max + 2
-      middle = str.each_line.map{|line| line.chomp.insert(0, "＞　")}.join("\n")
-      middle = middle.each_line.map{|line| line.chomp.insert(org_strmax, "　＜")}.join("\n")
-      top = "人" * org_strmax
-      bottom = "Y^" * (org_strmax -2)
-decoration_str = <<"EOS"
-＿#{top}＿
-#{middle}
-￣#{bottom}￣
-EOS
-      textilizable(decoration_str, {:object=>nil, :attachments=>[]})
+      generate_str = SuddenDeath.generate(str)
+      textilizable(generate_str, {:object=>nil, :attachments=>[]})
     end
   end
 end
