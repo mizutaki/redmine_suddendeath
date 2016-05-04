@@ -1,4 +1,5 @@
 require 'suddendeath_asset_tag_helper_patch'
+
 Redmine::Plugin.register :suddendeath do
   name 'Suddendeath plugin'
   author 'mizutaki'
