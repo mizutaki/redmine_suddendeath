@@ -4,19 +4,17 @@
 Redmine Toolbar extension.
 To assist in the sudden death ASCII art input.
 
-#--
-#＿人人人人人＿
-#＞　あああ　＜
-# ￣Y^Y^Y^￣
-#++
+＿人人人人人＿<br />
+＞　あああ　＜<br />
+ ￣Y^Y^Y^￣<br />
 
 = Requirement
 Currently it supports only a short Japanese one line.
 Otherwise, the format will collapse.
 
-*Redmine version                3.2.1.devel
-*Ruby version                   2.0.0-p598 (2014-11-13) [x86_64-linux]
-*Rails version                  4.2.6
+* Redmine version                3.2.1.devel
+* Ruby version                   2.0.0-p598 (2014-11-13) [x86_64-linux]
+* Rails version                  4.2.6
 
 = Usage
 Press the button of the added "突" in the toolbar of the ticket creation screen.
